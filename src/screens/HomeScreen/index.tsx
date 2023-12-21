@@ -2,7 +2,7 @@ import React from 'react'
 import { ScrollView } from 'react-native'
 import HeaderMain from '../../components/HeaderMain'
 import BannerCarousel from '../../components/BannerCarousel'
-import styles from './styles'
+import MainCategories from '../../components/MainCategories'
 
 export default function  () {
   return (
@@ -11,6 +11,7 @@ export default function  () {
 
       <HeaderMain/>
       <BannerCarousel/>
+      <MainCategories/>
 
     </ScrollView>
   )
