@@ -1,6 +1,7 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 import HomeScreen from '../screens/HomeScreen'
+import CategoryFilterScreen from '../screens/CategoryFilterScreen'
 import { Image } from 'react-native'
 
 const Stack = createStackNavigator()
@@ -10,11 +11,26 @@ function HomeNavigator() {
         <Stack.Navigator>
 
             <Stack.Screen
-//5C3EBC
+                //5C3EBC
                 name='Home'
                 component={HomeScreen}
                 options={{
-                    headerStyle:{backgroundColor:'#5C3EBC'}, 
+                    headerStyle: { backgroundColor: '#5C3EBC' },
+                    headerTitle: () => (
+                        <Image
+                            resizeMode="contain"
+                            style={{ width: 70, height: 30 }}
+                            source={require("../../assets/getirlogo.png")}
+                        />
+                    ),
+                }}
+            />
+
+            <Stack.Screen
+                name='CategoryDetails'
+                component={CategoryFilterScreen}
+                options={{
+                    headerStyle: { backgroundColor: '#5C3EBC' },
                     headerTitle: () => (
                         <Image
                             resizeMode="contain"
